@@ -5,8 +5,8 @@ import arbiter from '../../arbiter/arbiter';
 
 const Timer = () => {
     const { appState } = useContext(AppContext);
-    const [whiteTime, setWhiteTime] = useState(300); // 5 minutes
-    const [blackTime, setBlackTime] = useState(300); // 5 minutes
+    const [whiteTime, setWhiteTime] = useState(300); 
+    const [blackTime, setBlackTime] = useState(300); 
 
     useEffect(() => {
         const timer = setInterval(() => {
