@@ -1,21 +1,22 @@
 import './App.css';
 import Board from './components/Board/Board';
-import { reducer } from './reducer/reducer'
-import { useReducer } from 'react'
+import { reducer } from './reducer/reducer';
+import { useReducer } from 'react';
 import { initGameState } from './constants';
-import AppContext from './contexts/Context'
+import AppContext from './contexts/Context';
 import Control from './components/Control/Control';
 import TakeBack from './components/Control/bits/TakeBack';
 import MovesList from './components/Control/bits/MovesList';
+import Timer from './components/Timer/Timer';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
-
-    const [appState, dispatch ] = useReducer(reducer,initGameState);
+    const [appState, dispatch ] = useReducer(reducer, initGameState);
 
     const providerState = {
         appState,
         dispatch
-    }
+    };
 
     return (
         <AppContext.Provider value={providerState} >
@@ -25,6 +26,8 @@ function App() {
                     <MovesList/>
                     <TakeBack/>
                 </Control>
+                <Timer />
+                <Toaster />
             </div>
         </AppContext.Provider>
     ); 

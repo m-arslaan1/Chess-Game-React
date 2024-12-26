@@ -33,3 +33,10 @@ export const setupNewGame = () => {
         payload : initGameState
     }
 }
+
+export const detectCheck = (checkedPosition) => {
+    return {
+        type: actionTypes.CHECK,
+        payload : checkedPosition
+    }
+}

@@ -13,6 +13,7 @@ html,body {
   background: var(--bg-color);
   font-family: 'Sofia Sans', sans-serif;
   grid-template-columns: auto 220px;
+  text-align: center;
 
 }
 button {
@@ -23,3 +24,10 @@ button {
   margin: 10px 0;
   font-size: 1.1em;
 } 
+.timer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2em;
+  color: var(--dark-tile);
+}
