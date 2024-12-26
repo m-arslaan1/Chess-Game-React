@@ -35,32 +35,14 @@ const Timer = () => {
 
         if (arbiter.isCheckMate(currentPosition, opponent, castleDirection)) {
             toast.error('Checkmate');
-        } else if (arbiter.isPlayerInCheck({ positionAfterMove: currentPosition, position: currentPosition, player: opponent })) {
-            toast.error('Check');
         }
-    }, [appState.position, appState.turn]);
+    }, [appState.position, appState.turn, appState.castleDirection]);
 
     useEffect(() => {
-        const currentPosition = appState.position[appState.position.length - 1];
-        const piece = appState.lastMove?.piece;
-        const rank = appState.lastMove?.rank;
-        const file = appState.lastMove?.file;
-
-        if (piece && rank !== undefined && file !== undefined) {
-            const validMoves = arbiter.getValidMoves({
-                position: currentPosition,
-                castleDirection: appState.castleDirection,
-                prevPosition: appState.position[appState.position.length - 2],
-                piece,
-                rank,
-                file
-            });
-
-            if (validMoves.length === 0) {
-                toast.error('Illegal move');
-            }
+        if (appState.checkedPosition) {
+            toast.error('Check');
         }
-    }, [appState.lastMove]);
+    }, [appState.checkedPosition]);
 
     return (
         <div className="timer">
