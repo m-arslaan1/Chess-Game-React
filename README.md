@@ -26,7 +26,7 @@ A React-based chess game with features such as move validation, check/checkmate 
    ```sh
    npm start
    ```
-2. Open your web browser and navigate to `https://chess-game-001.netlify.app/` to play game.
+2. Open your web browser and navigate to https://chess-game-001.netlify.app to play game.
 
 ### Project Structure
 - ```src/components/Board/Board.js```: Renders the chessboard and tiles.
