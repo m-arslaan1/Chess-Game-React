@@ -2,6 +2,8 @@
 
 A React-based chess game with features such as move validation, check/checkmate detection, illegal move notifications, and countdown timers for each player.
 
+- Link to visit site: https://chess-game-001.netlify.app
+
 ## Features
 
 - **Move Validation**: Ensures that all moves are legal according to chess rules.
@@ -26,7 +28,7 @@ A React-based chess game with features such as move validation, check/checkmate 
    ```sh
    npm start
    ```
-2. Open your web browser and navigate to https://chess-game-001.netlify.app to play game.
+2. Open your web browser and navigate to http://localhost:3000 to play game.
 
 ### Project Structure
 - ```src/components/Board/Board.js```: Renders the chessboard and tiles.
